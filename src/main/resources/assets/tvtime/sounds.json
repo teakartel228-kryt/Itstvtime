@@ -1,0 +1,61 @@
+{
+  "music_disc.tv_time": {
+    "sounds": [
+      {
+        "name": "tvtime:music/tv_time",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.tenna_ex": {
+    "sounds": [
+      {
+        "name": "tvtime:music/tenna_ex",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.end_you": {
+    "sounds": [
+      {
+        "name": "tvtime:music/end_you",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.kaizo": {
+    "sounds": [
+      {
+        "name": "tvtime:music/kaizo",
+        "stream": true
+      }
+    ]
+  },
+  "music.boss.phase1": {
+    "sounds": [
+      {
+        "name": "tvtime:music/tv_time",
+        "stream": true,
+        "attenuation_distance": 64
+      }
+    ]
+  },
+  "music.boss.phase2": {
+    "sounds": [
+      {
+        "name": "tvtime:music/tenna_ex",
+        "stream": true,
+        "attenuation_distance": 64
+      }
+    ]
+  },
+  "music.boss.phase3": {
+    "sounds": [
+      {
+        "name": "tvtime:music/end_you",
+        "stream": true,
+        "attenuation_distance": 64
+      }
+    ]
+  }
+}

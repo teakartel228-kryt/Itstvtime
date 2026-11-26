@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "extended=false": {
+      "model": "tvtime:block/spike_trap_retracted"
+    },
+    "extended=true": {
+      "model": "tvtime:block/spike_trap_extended"
+    }
+  }
+}

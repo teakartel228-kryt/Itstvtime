@@ -1,0 +1,20 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "tvtime:tenna"
+      },
+      {
+        "texture": "tvtime:tenna_overlay"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "tvtime:tenna"
+      },
+      {
+        "texture": "tvtime:tenna_overlay"
+      }
+    ]
+  }
+}

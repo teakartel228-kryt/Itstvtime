@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "armed=true": {
+      "model": "tvtime:block/bear_trap_open"
+    },
+    "armed=false": {
+      "model": "tvtime:block/bear_trap_closed"
+    }
+  }
+}
