@@ -61,7 +61,7 @@ public class BearTrapBlock extends Block {
 		if (!level.isClientSide()) {
 			level.setBlock(pos, state.setValue(ARMED, true), Block.UPDATE_ALL);
 			level.playSound(null, pos, SoundEvents.TRIPWIRE_CLICK_OFF, SoundSource.BLOCKS, 1.0F, 1.0F);
-			player.displayClientMessage(Component.translatable("tvtime.trap.rearmed"), true);
+			player.sendSystemMessage(Component.translatable("tvtime.trap.rearmed"), true);
 		}
 		return InteractionResult.SUCCESS;
 	}

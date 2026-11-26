@@ -1,7 +1,6 @@
 package com.tvtime.registry;
 
 import com.tvtime.TvTimeMod;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -10,7 +9,7 @@ import net.minecraft.world.item.ItemStack;
 
 public final class ModTabs {
 	public static final CreativeModeTab TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TvTimeMod.id("main"),
-		FabricItemGroup.builder()
+		CreativeModeTab.builder()
 			.title(Component.translatable("itemGroup.tvtime"))
 			.icon(() -> new ItemStack(ModItems.TENNA_HELMET))
 			.displayItems((params, out) -> {

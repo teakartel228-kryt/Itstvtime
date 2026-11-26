@@ -7,7 +7,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.goal.Goal;
-import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.monster.zombie.Zombie;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
@@ -95,7 +95,7 @@ public class ZombieBreakBlocksGoal extends Goal {
 	@Override
 	public boolean canContinueToUse() {
 		if (pos == null || mob.getTarget() == null || !mob.getTarget().isAlive()) return false;
-		return mob.distanceToSqr(pos.getCenter()) <= 9.0 && !mob.level().getBlockState(pos).isAir();
+		return mob.distanceToSqr(Vec3.atCenterOf(pos)) <= 9.0 && !mob.level().getBlockState(pos).isAir();
 	}
 
 	@Override

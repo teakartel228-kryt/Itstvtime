@@ -1,7 +1,6 @@
 package com.tvtime.registry;
 
 import com.tvtime.TvTimeMod;
-import net.minecraft.Util;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
@@ -28,14 +27,18 @@ public final class ModArmor {
 
 	public static final ArmorMaterial TENNA = new ArmorMaterial(
 		BASE_DURABILITY,
-		Util.make(new EnumMap<>(ArmorType.class), m -> {
-			m.put(ArmorType.BOOTS, 2);
-			m.put(ArmorType.LEGGINGS, 5);
-			m.put(ArmorType.CHESTPLATE, 7);
-			m.put(ArmorType.HELMET, 3);
-			m.put(ArmorType.BODY, 7);
-		}),
+		defense(),
 		11, SoundEvents.ARMOR_EQUIP_IRON, 1.0F, 0.0F, REPAIRS, ASSET);
+
+	private static EnumMap<ArmorType, Integer> defense() {
+		EnumMap<ArmorType, Integer> m = new EnumMap<>(ArmorType.class);
+		m.put(ArmorType.BOOTS, 2);
+		m.put(ArmorType.LEGGINGS, 5);
+		m.put(ArmorType.CHESTPLATE, 7);
+		m.put(ArmorType.HELMET, 3);
+		m.put(ArmorType.BODY, 7);
+		return m;
+	}
 
 	private ModArmor() {}
 }

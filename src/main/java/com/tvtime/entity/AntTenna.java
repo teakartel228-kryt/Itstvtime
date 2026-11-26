@@ -4,6 +4,7 @@ import com.tvtime.TvTimeConfig;
 import com.tvtime.registry.ModEntities;
 import com.tvtime.registry.ModSounds;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
 import net.minecraft.network.protocol.game.ClientboundStopSoundPacket;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerBossEvent;
@@ -46,7 +47,7 @@ import java.util.UUID;
 public class AntTenna extends Monster {
 	private enum Attack { NONE, STAR_CAST, HARD_CUT, RIMSHOT, TV_RAIN, COOKING, LIVE }
 
-	private final ServerBossEvent bossBar = new ServerBossEvent(Component.translatable("entity.tvtime.ant_tenna"),
+	private final ServerBossEvent bossBar = new ServerBossEvent(UUID.randomUUID(), Component.translatable("entity.tvtime.ant_tenna"),
 		BossEvent.BossBarColor.RED, BossEvent.BossBarOverlay.NOTCHED_10);
 
 	private int phase = 1;
@@ -91,9 +92,9 @@ public class AntTenna extends Monster {
 		targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
 	}
 
-	@Override public boolean shouldDespawnInPeaceful() { return false; }
+	public boolean shouldDespawnInPeaceful() { return false; }
 	@Override public boolean removeWhenFarAway(double dist) { return false; }
-	@Override public boolean canChangeDimensions(boolean portal) { return false; }
+	public boolean canUsePortal(boolean allowPassengers) { return false; }
 
 	private float difficultyScale(ServerLevel level) {
 		return switch (level.getDifficulty()) { case PEACEFUL, EASY -> 0.7F; case NORMAL -> 1.0F; case HARD -> 1.35F; };
@@ -133,7 +134,7 @@ public class AntTenna extends Monster {
 	}
 
 	private void say(ServerLevel sl, String key) {
-		for (ServerPlayer p : sl.players()) if (p.distanceToSqr(this) < 64 * 64) p.displayClientMessage(Component.translatable(key), false);
+		for (ServerPlayer p : sl.players()) if (p.distanceToSqr(this) < 64 * 64) p.sendSystemMessage(Component.translatable(key), false);
 	}
 
 	private void spawnMikes(ServerLevel sl) {
@@ -208,7 +209,7 @@ public class AntTenna extends Monster {
 						if (across < 1.6 && Math.abs(along) < 22 && p.getY() - getY() < 3.5) {
 							p.hurtServer(sl, damageSources().mobAttack(this), 9.0F * dmg);
 							Vec3 side = rel.dot(cutDir.cross(new Vec3(0, 1, 0))) >= 0 ? cutDir.cross(new Vec3(0, 1, 0)) : cutDir.cross(new Vec3(0, 1, 0)).scale(-1);
-							p.push(side.x * 0.9, 0.5, side.z * 0.9); p.hurtMarked = true;
+							p.push(side.x * 0.9, 0.5, side.z * 0.9); p.connection.send(new ClientboundSetEntityMotionPacket(p));
 						}
 					}
 				} else if (attackTick > 36) endAttack();
@@ -309,7 +310,7 @@ public class AntTenna extends Monster {
 		for (Iterator<LaughStar> it = stars.iterator(); it.hasNext(); ) {
 			LaughStar s = it.next();
 			s.life--;
-			Player near = sl.getNearestPlayer(s.pos.x, s.pos.y, s.pos.z, 40, p -> !p.isSpectator() && !p.isCreative());
+			Player near = sl.getNearestPlayer(s.pos.x, s.pos.y, s.pos.z, 40, e -> e instanceof Player pl && !pl.isSpectator() && !pl.isCreative());
 			if (near != null) {
 				Vec3 dir = near.position().add(0, 1, 0).subtract(s.pos).normalize();
 				s.pos = s.pos.add(dir.scale(0.32));
