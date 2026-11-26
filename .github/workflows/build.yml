@@ -1,0 +1,39 @@
+name: build
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 25
+
+      - name: Set up Gradle (with cache)
+        uses: gradle/actions/setup-gradle@v4
+
+      # при загрузке через веб-интерфейс GitHub права на исполнение теряются
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: Build
+        run: ./gradlew build --stacktrace
+
+      - name: Upload mod jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: tenna-tv-time
+          path: |
+            build/libs/*.jar
+            !build/libs/*-sources.jar
+          if-no-files-found: error
