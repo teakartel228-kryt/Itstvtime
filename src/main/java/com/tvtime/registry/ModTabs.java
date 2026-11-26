@@ -9,7 +9,7 @@ import net.minecraft.world.item.ItemStack;
 
 public final class ModTabs {
 	public static final CreativeModeTab TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TvTimeMod.id("main"),
-		CreativeModeTab.builder()
+		CreativeModeTab.builder(CreativeModeTab.Row.TOP, 0)
 			.title(Component.translatable("itemGroup.tvtime"))
 			.icon(() -> new ItemStack(ModItems.TENNA_HELMET))
 			.displayItems((params, out) -> {

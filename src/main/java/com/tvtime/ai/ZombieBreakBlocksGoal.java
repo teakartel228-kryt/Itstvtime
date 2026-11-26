@@ -9,6 +9,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.monster.zombie.Zombie;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 
@@ -104,7 +105,7 @@ public class ZombieBreakBlocksGoal extends Goal {
 		mob.getLookControl().setLookAt(pos.getX() + .5, pos.getY() + .5, pos.getZ() + .5);
 		progress++;
 		if (progress % 8 == 0) {
-			mob.swing(InteractionHand.MAIN_HAND);
+			mob.swing(InteractionHand.MAIN_HAND, SwingAnimation.DEFAULT);
 			BlockState s = level.getBlockState(pos);
 			level.playSound(null, pos, s.getSoundType().getHitSound(), mob.getSoundSource(), 0.6F, 0.8F);
 		}

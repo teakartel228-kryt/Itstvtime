@@ -3,6 +3,7 @@ package com.tvtime.block;
 import com.tvtime.entity.AntTenna;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -61,7 +62,7 @@ public class BearTrapBlock extends Block {
 		if (!level.isClientSide()) {
 			level.setBlock(pos, state.setValue(ARMED, true), Block.UPDATE_ALL);
 			level.playSound(null, pos, SoundEvents.TRIPWIRE_CLICK_OFF, SoundSource.BLOCKS, 1.0F, 1.0F);
-			player.sendSystemMessage(Component.translatable("tvtime.trap.rearmed"), true);
+			if (player instanceof ServerPlayer sp) sp.sendSystemMessage(Component.translatable("tvtime.trap.rearmed"), true);
 		}
 		return InteractionResult.SUCCESS;
 	}
