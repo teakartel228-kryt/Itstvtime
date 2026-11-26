@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " L ",
+    "GRG",
+    " S "
+  ],
+  "key": {
+    "L": "minecraft:lever",
+    "G": "minecraft:glass_pane",
+    "R": "minecraft:redstone_block",
+    "S": "tvtime:tv_scrap"
+  },
+  "result": {
+    "id": "tvtime:tv_remote",
+    "count": 1
+  }
+}

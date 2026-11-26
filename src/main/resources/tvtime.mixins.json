@@ -1,0 +1,8 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.tvtime.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["ZombieMixin", "ServerLevelSoundMixin"],
+  "injectors": { "defaultRequire": 1 }
+}

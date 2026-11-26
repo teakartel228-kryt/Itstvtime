@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SSS",
+    "S S"
+  ],
+  "key": {
+    "S": "tvtime:tv_scrap"
+  },
+  "result": {
+    "id": "tvtime:tenna_helmet",
+    "count": 1
+  }
+}

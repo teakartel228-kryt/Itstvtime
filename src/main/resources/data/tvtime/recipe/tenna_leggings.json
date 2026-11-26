@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "SSS",
+    "S S",
+    "S S"
+  ],
+  "key": {
+    "S": "tvtime:tv_scrap"
+  },
+  "result": {
+    "id": "tvtime:tenna_leggings",
+    "count": 1
+  }
+}

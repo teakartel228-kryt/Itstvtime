@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "length_in_seconds": 146,
+  "description": {
+    "translate": "jukebox_song.tvtime.tenna_ex"
+  },
+  "sound_event": "tvtime:music_disc.tenna_ex"
+}

@@ -1,0 +1,337 @@
+{
+  "dimensions": {
+    "minecraft:overworld": {
+      "type": "minecraft:overworld",
+      "generator": {
+        "type": "minecraft:noise",
+        "settings": "minecraft:overworld",
+        "biome_source": {
+          "type": "minecraft:multi_noise",
+          "biomes": [
+            {
+              "biome": "minecraft:windswept_hills",
+              "parameters": {
+                "temperature": [
+                  -2.0,
+                  -0.1637
+                ],
+                "humidity": [
+                  -2.0,
+                  -0.2563
+                ],
+                "continentalness": [
+                  -2.0,
+                  2.0
+                ],
+                "erosion": [
+                  -2.0,
+                  2.0
+                ],
+                "weirdness": [
+                  -2.0,
+                  2.0
+                ],
+                "depth": [
+                  0.0,
+                  0.0
+                ],
+                "offset": 0.0
+              }
+            },
+            {
+              "biome": "minecraft:windswept_hills",
+              "parameters": {
+                "temperature": [
+                  -0.1637,
+                  0.1637
+                ],
+                "humidity": [
+                  -2.0,
+                  -0.2563
+                ],
+                "continentalness": [
+                  -2.0,
+                  2.0
+                ],
+                "erosion": [
+                  -2.0,
+                  2.0
+                ],
+                "weirdness": [
+                  -2.0,
+                  2.0
+                ],
+                "depth": [
+                  0.0,
+                  0.0
+                ],
+                "offset": 0.0
+              }
+            },
+            {
+              "biome": "minecraft:windswept_forest",
+              "parameters": {
+                "temperature": [
+                  0.1637,
+                  2.0
+                ],
+                "humidity": [
+                  -2.0,
+                  -0.2563
+                ],
+                "continentalness": [
+                  -2.0,
+                  2.0
+                ],
+                "erosion": [
+                  -2.0,
+                  2.0
+                ],
+                "weirdness": [
+                  -2.0,
+                  2.0
+                ],
+                "depth": [
+                  0.0,
+                  0.0
+                ],
+                "offset": 0.0
+              }
+            },
+            {
+              "biome": "minecraft:windswept_gravelly_hills",
+              "parameters": {
+                "temperature": [
+                  0.1637,
+                  2.0
+                ],
+                "humidity": [
+                  -0.2563,
+                  0.0
+                ],
+                "continentalness": [
+                  -2.0,
+                  2.0
+                ],
+                "erosion": [
+                  -2.0,
+                  2.0
+                ],
+                "weirdness": [
+                  -2.0,
+                  2.0
+                ],
+                "depth": [
+                  0.0,
+                  0.0
+                ],
+                "offset": 0.0
+              }
+            },
+            {
+              "biome": "minecraft:meadow",
+              "parameters": {
+                "temperature": [
+                  -0.1637,
+                  0.1637
+                ],
+                "humidity": [
+                  -0.2563,
+                  0.0
+                ],
+                "continentalness": [
+                  -2.0,
+                  2.0
+                ],
+                "erosion": [
+                  -2.0,
+                  2.0
+                ],
+                "weirdness": [
+                  -2.0,
+                  2.0
+                ],
+                "depth": [
+                  0.0,
+                  0.0
+                ],
+                "offset": 0.0
+              }
+            },
+            {
+              "biome": "minecraft:stony_peaks",
+              "parameters": {
+                "temperature": [
+                  -2.0,
+                  -0.1637
+                ],
+                "humidity": [
+                  -0.2563,
+                  0.0
+                ],
+                "continentalness": [
+                  -2.0,
+                  2.0
+                ],
+                "erosion": [
+                  -2.0,
+                  2.0
+                ],
+                "weirdness": [
+                  -2.0,
+                  2.0
+                ],
+                "depth": [
+                  0.0,
+                  0.0
+                ],
+                "offset": 0.0
+              }
+            },
+            {
+              "biome": "minecraft:jagged_peaks",
+              "parameters": {
+                "temperature": [
+                  -2.0,
+                  -0.1637
+                ],
+                "humidity": [
+                  0.0,
+                  0.2563
+                ],
+                "continentalness": [
+                  -2.0,
+                  2.0
+                ],
+                "erosion": [
+                  -2.0,
+                  2.0
+                ],
+                "weirdness": [
+                  -2.0,
+                  2.0
+                ],
+                "depth": [
+                  0.0,
+                  0.0
+                ],
+                "offset": 0.0
+              }
+            },
+            {
+              "biome": "minecraft:frozen_peaks",
+              "parameters": {
+                "temperature": [
+                  -0.1637,
+                  0.1637
+                ],
+                "humidity": [
+                  0.0,
+                  0.2563
+                ],
+                "continentalness": [
+                  -2.0,
+                  2.0
+                ],
+                "erosion": [
+                  -2.0,
+                  2.0
+                ],
+                "weirdness": [
+                  -2.0,
+                  2.0
+                ],
+                "depth": [
+                  0.0,
+                  0.0
+                ],
+                "offset": 0.0
+              }
+            },
+            {
+              "biome": "minecraft:snowy_slopes",
+              "parameters": {
+                "temperature": [
+                  0.1637,
+                  2.0
+                ],
+                "humidity": [
+                  0.0,
+                  0.2563
+                ],
+                "continentalness": [
+                  -2.0,
+                  2.0
+                ],
+                "erosion": [
+                  -2.0,
+                  2.0
+                ],
+                "weirdness": [
+                  -2.0,
+                  2.0
+                ],
+                "depth": [
+                  0.0,
+                  0.0
+                ],
+                "offset": 0.0
+              }
+            },
+            {
+              "biome": "minecraft:grove",
+              "parameters": {
+                "temperature": [
+                  0.1637,
+                  2.0
+                ],
+                "humidity": [
+                  0.2563,
+                  2.0
+                ],
+                "continentalness": [
+                  -2.0,
+                  2.0
+                ],
+                "erosion": [
+                  -2.0,
+                  2.0
+                ],
+                "weirdness": [
+                  -2.0,
+                  2.0
+                ],
+                "depth": [
+                  0.0,
+                  0.0
+                ],
+                "offset": 0.0
+              }
+            }
+          ]
+        }
+      }
+    },
+    "minecraft:the_nether": {
+      "type": "minecraft:the_nether",
+      "generator": {
+        "type": "minecraft:noise",
+        "settings": "minecraft:nether",
+        "biome_source": {
+          "type": "minecraft:multi_noise",
+          "preset": "minecraft:nether"
+        }
+      }
+    },
+    "minecraft:the_end": {
+      "type": "minecraft:the_end",
+      "generator": {
+        "type": "minecraft:noise",
+        "settings": "minecraft:end",
+        "biome_source": {
+          "type": "minecraft:the_end"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "length_in_seconds": 157,
+  "description": {
+    "translate": "jukebox_song.tvtime.kaizo"
+  },
+  "sound_event": "tvtime:music_disc.kaizo"
+}

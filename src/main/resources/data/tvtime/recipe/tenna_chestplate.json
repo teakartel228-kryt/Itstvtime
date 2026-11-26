@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "S S",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": "tvtime:tv_scrap"
+  },
+  "result": {
+    "id": "tvtime:tenna_chestplate",
+    "count": 1
+  }
+}

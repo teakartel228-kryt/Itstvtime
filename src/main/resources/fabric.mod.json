@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "tvtime",
+  "version": "${version}",
+  "name": "TV Time: Tenna & Multi-Biome",
+  "description": "Multi-biome world presets, Deltarune music discs, smart block-breaking zombies, traps, Tenna armor and the boss Mr. Ant-Tenna.",
+  "authors": ["you"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.tvtime.TvTimeMod"],
+    "client": ["com.tvtime.client.TvTimeClient"]
+  },
+  "mixins": ["tvtime.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

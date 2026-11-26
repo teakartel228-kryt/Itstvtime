@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "I I",
+    "ITI",
+    "III"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "T": "minecraft:tripwire_hook"
+  },
+  "result": {
+    "id": "tvtime:bear_trap",
+    "count": 1
+  }
+}

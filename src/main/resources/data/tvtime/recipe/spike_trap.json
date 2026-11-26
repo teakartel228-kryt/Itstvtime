@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "pattern": [
+    "BBB",
+    "BPB",
+    "III"
+  ],
+  "key": {
+    "B": "minecraft:iron_bars",
+    "P": "minecraft:stone_pressure_plate",
+    "I": "minecraft:iron_ingot"
+  },
+  "result": {
+    "id": "tvtime:spike_trap",
+    "count": 1
+  }
+}

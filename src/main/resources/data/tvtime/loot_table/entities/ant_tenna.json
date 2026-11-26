@@ -1,0 +1,64 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 6,
+        "max": 12
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "tvtime:tv_scrap"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "tvtime:music_disc_tv_time"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "tvtime:music_disc_tenna_ex"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "tvtime:music_disc_end_you"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "tvtime:music_disc_kaizo"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:random_chance",
+          "chance": 0.35
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 4
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

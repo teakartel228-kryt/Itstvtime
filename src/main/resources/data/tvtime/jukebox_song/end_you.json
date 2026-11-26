@@ -1,0 +1,8 @@
+{
+  "comparator_output": 15,
+  "length_in_seconds": 137,
+  "description": {
+    "translate": "jukebox_song.tvtime.end_you"
+  },
+  "sound_event": "tvtime:music_disc.end_you"
+}
